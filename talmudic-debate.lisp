@@ -13,7 +13,7 @@
 
 (defclass targeted-statement (base-statement)
   (
-   (target :initarg :target :initform nil :accessor target :type 'base-statement)
+   (target :initarg :target :initform nil :accessor target :type (or 'base-statement 'fixnum))
    )
   )
 
