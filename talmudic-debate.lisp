@@ -55,6 +55,19 @@
      (target :type (or difficulty fixnum))
      )
     )
+
+  (defun fixup-targets (statements)
+    (iter
+     (for statement in-sequence statements with-index index)
+     (if (typep statement 'targeted-statement)
+         (let ((target (target statement))
+               )
+           (if (typep target 'fixnum)
+               (setf (target statement) (elt statements (- index target))))
+           )
+         )
+     )
+    )
   )
 
 (defvar talmud (list))

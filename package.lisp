@@ -9,11 +9,13 @@
   (:export #:author
            #:text
            #:statement
+           #:targeted-statement
            #:query
            #:proof
            #:contradiction
            #:difficulty
            #:resolution
+           #:fixup-targets
            )
   )
 
